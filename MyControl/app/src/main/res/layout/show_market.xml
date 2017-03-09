@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <Button
+        android:id="@+id/btn_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转市场-应用页" />
+
+    <Button
+        android:id="@+id/btn_get_app_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取本机应用市场列表_getInstallAppMarkets" />
+
+    <Button
+        android:id="@+id/btn_get_app_store_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取本机应用市场列表_InstalledAPPs" />
+
+
+    <TextView
+        android:id="@+id/tv_app_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_app_list_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

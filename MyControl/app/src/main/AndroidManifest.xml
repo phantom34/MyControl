@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.administrator.mycontrol">
-
+    
     <application
-            android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
-            android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".dagger.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".calendd.ADCircleCalendarActivity"/>
+        <activity android:name=".calendd.CircleCalendarActivity"/>
+        <activity android:name=".calendd.GridCalendarActivity"/>
+        <!--<activity android:name=".dagger.LoginActivity"/>-->
+        <activity android:name=".dagger.MainDaggerActivity"/>
+        <!--<activity android:name=".animation.AnimationShowActivity"/>-->
+        <!--<activity android:name=".appmarket.ShowMarketActivity"/>-->
+        <!--<activity android:name=".webview.OpenWebActivity"/>-->
     </application>
 
 </manifest>
