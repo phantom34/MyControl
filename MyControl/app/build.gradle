@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'me.tatarka.retrolambda'
+
 
 android {
     compileSdkVersion 25
@@ -18,6 +22,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    android {
+        sourceSets {
+            main.java.srcDirs += 'src/main/kotlin'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -25,17 +38,25 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.kotlin_version"
+    compile "org.jetbrains.anko:anko-common:$rootProject.anko_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$rootProject.kotlin_version"
+    compile "org.jetbrains.anko:anko-sqlite:$rootProject.anko_version"
     compile 'com.android.support:appcompat-v7:25.0.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:gridlayout-v7:25.2.0'
     compile 'com.android.support:recyclerview-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     compile 'com.google.android.gms:play-services-maps:9.8.0'
- //   compile 'com.google.dagger:dagger:2.4'
     compile 'com.jakewharton:butterknife:7.0.1'
- //  apt 'com.google.dagger:dagger-compiler:2.4'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.google.dagger:dagger:2.10-rc2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
     apt 'com.google.dagger:dagger-compiler:2.10-rc2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
 }
