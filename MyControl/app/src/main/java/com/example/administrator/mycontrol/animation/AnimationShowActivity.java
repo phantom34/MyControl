@@ -50,7 +50,7 @@ public class AnimationShowActivity extends AppCompatActivity {
         scaleX.setDuration(6000);
 //        alphaAnimator.setRepeatMode(ValueAnimator.REVERSE);
         AnimatorSet mAnimatorSet = new AnimatorSet();
-        mAnimatorSet.playTogether(scaleX,alphaAnimator);
+        mAnimatorSet.playTogether(scaleX,scaleY,alphaAnimator);
 //        mAnimatorSet.setDuration(1000);
         mAnimatorSet.setInterpolator(new BreatheInterpolator());
         mAnimatorSet.start();
